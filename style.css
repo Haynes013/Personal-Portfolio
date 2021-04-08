@@ -1,0 +1,93 @@
+body {
+  height: 820px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background: conic-gradient(from 175deg at 50% 50%, #BF0603 -48.6deg, #001427 136.24deg, #BF0603 311.4deg, #001427 496.24deg);
+}
+
+#body_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#body_text #left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  position: absolute;
+  top: 200px;
+}
+
+#body_text #right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: right;
+  position: absolute;
+  top: 500px;
+}
+
+#body_text #left, #body_text #right {
+  font-family: Arimo;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 27.6px;
+  margin: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: aliceblue;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 80px;
+  color: aliceblue;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+img {
+  width: 100%;
+}
+
+#about_me, #portfolio {
+  position: absolute;
+  top: 200px;
+  color: #f4d58d;
+}
+
+#contacts {
+  background-color: #001427;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-left: 0px;
+}
+
+#contacts ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+#contacts ul a {
+  text-decoration: none;
+  color: aliceblue;
+}
+/*# sourceMappingURL=style.css.map */
