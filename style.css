@@ -48,10 +48,11 @@ body {
 h1 {
   text-align: center;
   margin: 0 auto;
-  margin-top: 100px;
   margin-bottom: 80px;
   color: aliceblue;
   text-shadow: 2px 2px 4px #000000;
+  position: fixed;
+  top: 20px;
 }
 
 img {
@@ -60,7 +61,7 @@ img {
 
 #about_me, #portfolio {
   position: absolute;
-  top: 200px;
+  top: 250px;
   color: #f4d58d;
 }
 
@@ -89,5 +90,40 @@ img {
 #contacts ul a {
   text-decoration: none;
   color: aliceblue;
+}
+
+.profile1 {
+  width: 300px;
+  height: 200px;
+  margin: auto;
+  margin-top: 150px;
+  /* you need to match the shadow color to your background or image border for the desired effect*/
+  -webkit-box-shadow: 0 0 8px 8px white inset;
+          box-shadow: 0 0 8px 8px white inset;
+}
+
+.back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.backArrow {
+  font-size: 48px;
+  color: aliceblue;
+  text-shadow: 2px 2px 4px #000000;
+  position: fixed;
+  top: 15px;
+  left: 50px;
 }
 /*# sourceMappingURL=style.css.map */
