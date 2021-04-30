@@ -17,7 +17,7 @@ body {
   display: flex;
   text-align: left;
   position: absolute;
-  top: 200px;
+  top: 100px;
 }
 
 #body_text #right {
@@ -26,7 +26,7 @@ body {
   display: flex;
   text-align: right;
   position: absolute;
-  top: 500px;
+  top: 350px;
 }
 
 #body_text #left, #body_text #right {
@@ -59,10 +59,41 @@ img {
   width: 100%;
 }
 
-#about_me, #portfolio {
-  position: absolute;
-  top: 250px;
+.group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about {
   color: #f4d58d;
+  text-decoration: none;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
+}
+
+#portfolio {
+  color: #f4d58d;
+  text-decoration: none;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+#portfolio:hover {
+  font-size: 36px;
+  color: aliceblue;
+}
+
+#about:hover {
+  color: aliceblue;
+  font-size: 36px;
 }
 
 #contacts {
@@ -92,14 +123,48 @@ img {
   color: aliceblue;
 }
 
+#contacts .out {
+  font-size: 22px;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+#contacts .out:hover {
+  font-size: 40px;
+  text-shadow: 4px 4px 5px #ad0c0c;
+}
+
 .profile1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.profilePic {
   width: 300px;
-  height: 200px;
+  height: 533px;
   margin: auto;
   margin-top: 150px;
   /* you need to match the shadow color to your background or image border for the desired effect*/
-  -webkit-box-shadow: 0 0 8px 8px white inset;
-          box-shadow: 0 0 8px 8px white inset;
+  border: solid 1.5em rgba(243, 241, 241, 0.411);
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), 2px 2px 17px rgba(0, 0, 0, 0.35), 2px 2px 25px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), 2px 2px 17px rgba(0, 0, 0, 0.35), 2px 2px 25px rgba(0, 0, 0, 0.5);
+}
+
+.aboutP {
+  width: 40%;
+  margin-top: 150px;
+  margin-right: 100px;
+  font-family: Arimo;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 37.6px;
+  color: aliceblue;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .back {
