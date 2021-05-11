@@ -1,159 +1,128 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  --ff-primary: "Source Sans Pro", sans-serif;
+  --ff-secondary: "Source Code Pro", monospace;
+  --fw-reg: 300;
+  --fw-bold: 900;
 
+  --clr-light: #fff;
+  --clr-dark: #3f3f3f;
+  --clr-accent: #e01663;
 
-body{
-    height: 820px;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background: conic-gradient(from 175deg at 50% 50%, #BF0603 -48.6deg, #001427 136.24deg, #BF0603 311.4deg, #001427 496.24deg);
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+}
+@media (min-width: 800px) {
+  :root {
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.125rem;
+  }
 }
 
-#body_text{
-    display: flex;
-    #left{
-        display: flex;
-        text-align: left;
-        position: absolute;
-        top: 100px;
-        
-    }
-    #right{
-        display:flex;
-        text-align: right;
-        position: absolute;
-        top: 350px;
-        
-    }
-    #left , #right{
-        font-family: Arimo;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 27.6px;
-        margin: 40px;
-        justify-content: center;
-        align-items: center;
-        color: aliceblue;
-        text-shadow: 2px 2px 4px #000000;
-        
-    }
-    
-};
-
-h1{
-    text-align: center;
-    margin: 0 auto;
-    // margin-top: 100px;
-    margin-bottom: 80px;
-    color: aliceblue;
-    text-shadow: 2px 2px 4px #000000;
-    position: fixed;
-    top: 20px;
-};
-
-img{
-    width: 100%;
-};
-.group{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+// General Styles
+body {
+  background: var(--clr-light);
+  color: var(--clr-dark);
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1;
 }
 
-#about{
-    // position: absolute;
-    // top: 300px;
-    color: #f4d58d;
-    text-decoration: none;
-    transition: all 0.4s ease-in;
-};
-
- #portfolio{
-    // position: absolute;
-    // top: 250px;
-    color: #f4d58d;
-    text-decoration: none;
-    transition: all 0.4s ease-out;
-};
-
-#portfolio:hover{
-    font-size: 36px;
-    color:aliceblue;
-}
-#about:hover{
-    color:aliceblue;
-    font-size: 36px;
+section {
+  padding: 5em 2em;
 }
 
-
-// Footer CSS
-#contacts{
-    background-color:  #001427; 
-    width: 100%;
-    height: 80px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    margin-left: 0px;
-    ul{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        list-style: none;
-        
-        a{
-            text-decoration: none;
-            color: aliceblue;
-        }
-    }
-
-    .out{
-        font-size: 22px;
-        transition: all 0.2s ease-in;
-    }
-    .out:hover{
-        font-size: 40px;
-        text-shadow: 4px 4px 5px rgb(173, 12, 12);
-    }
+img {
+  display: block;
+  max-width: 100%;
+}
+strong {
+  font-weight: var(--fw-bold);
+  display: block;
+}
+h1,
+h2 {
+  line-height: 1.1;
+  margin: 0;
+  font-weight: 100;
+}
+h1 {
+  font-size: var(--fs-h1);
+}
+h2 {
+  font-size: var(--fs-h2);
 }
 
-// About Me CSS
-.profile1{
-    display: flex;
-    flex-direction: row;
+.section__title {
+  margin-bottom: 0.25em;
 }
-.profilePic{
-    width: 300px;
-    height: 533px;
-    margin: auto;
-    margin-top: 150px;
-    /* you need to match the shadow color to your background or image border for the desired effect*/
-    border: solid 1.5em rgba(243, 241, 241, 0.411);
-    box-shadow: 2px 2px 5px rgba(#000, .2), 2px 2px 17px rgba(#000, .35), 2px 2px 25px rgba(#000, .5);
-                          
+
+.section__title--intro {
+  font-weight: var(--fw-reg);
 }
-.aboutP{
-    width: 40%;
-    margin-top: 150px;
-    margin-right: 100px;
-    font-family: Arimo;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 37.6px;
-        color: aliceblue;
-        text-shadow: 2px 2px 4px #000000;
+
+.section__title--intro strong {
+  display: block;
 }
-.back{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+
+.section__subtitle--intro,
+.section__subtitle--about {
+  font-family: var(--ff-secondary);
+  background: var(--clr-accent);
+  margin-bottom: 1em;
+  padding: 0.45em 1em;
 }
-.backArrow{
-    font-size: 48px;
-    color: aliceblue;
-    text-shadow: 2px 2px 4px #000000;
-    position:fixed;
-    top: 15px;
-    left: 50px;
+
+// Header
+
+nav {
+  display: none;
+}
+
+// Intro Section
+
+.intro {
+  position: relative;
+}
+
+.intro__img {
+  box-shadow: var(--bs);
+}
+.section__subtitle--intro {
+  display: inline-block;
+}
+
+.about-me {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.about-me__img {
+  box-shadow: var(--bs);
+}
+
+// My Work
+
+.my-work {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  text-align: center;
+}
+.section__subtitle--work {
+  color: var(--clr-accent);
+  font-weight: var(--fw-bold);
+  margin-bottom: 1em;
 }
 
 
